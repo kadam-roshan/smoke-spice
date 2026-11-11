@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "name": "menu-categories-seed",
+    "extends": "restaurant-menu-design-system.json",
+    "description": "Category structure for the menu. Plugs into data_schema.menu.categories of the design system. Items are intentionally empty.",
+    "total_categories": 19
+  },
+  "settings": {
+    "currency": "INR",
+    "locale": "en-IN",
+    "price_format": {
+      "symbol": "₹",
+      "position": "prefix",
+      "minimum_fraction_digits": 0,
+      "note": "Set to 2 to mirror the 2-decimal style of the reference design."
+    }
+  },
+  "ui_extensions": {
+    "note": "The reference design has ~4-5 tabs. With 19 categories the tab bar needs help. These rules extend, not replace, the design system.",
+    "diet_filter": {
+      "component": "segmented control / chips row placed between brand_header and category_tab_bar",
+      "options": [
+        {
+          "id": "all",
+          "label": "All"
+        },
+        {
+          "id": "veg",
+          "label": "Veg"
+        },
+        {
+          "id": "non_veg",
+          "label": "Non Veg"
+        }
+      ],
+      "default": "all",
+      "behavior": "Filters the tab bar and the section list. Categories with diet 'both' are always visible.",
+      "style": "pill chips, height 32, radius 16, inactive: bg surface.tab_bar + text.tab_inactive, active: bg brand.accent + text.on_accent, font 13/600"
+    },
+    "tab_bar": {
+      "label_source": "short_label (diet prefix dropped when a diet filter is active; kept in 'All' mode)",
+      "auto_scroll_active_tab_into_view": true,
+      "scroll_snap": "proximity",
+      "fade_edge": "16px white-to-transparent gradient on the right edge to hint more tabs"
+    },
+    "veg_indicator": {
+      "purpose": "Regulatory-style dietary mark shown on every item row, before the item name.",
+      "shape": "14x14 square, 1.5px border, radius 2px, centered 8px filled circle",
+      "veg": {
+        "color": "#0F8A3C"
+      },
+      "non_veg": {
+        "color": "#B3261E"
+      },
+      "exception_note": "These two colors are semantic indicators and are the ONLY allowed exceptions to the single-accent rule. Never use them for decoration.",
+      "placement": "inline, 6px gap before item_name, vertically centered to first line"
+    },
+    "section_ordering": "Render sections in the order field below. When the diet filter is 'all', insert a subtle group label ('Veg' / 'Non Veg' / 'Breads & Packs') using section_subtitle styling before the first section of each group.",
+    "family_pack_card": "Optional: items in the family-pack category may show a small muted 'serves N' label under the price using price_variant_label style."
+  },
+  "groups": [
+    {
+      "id": "veg",
+      "label": "Veg",
+      "order": 1
+    },
+    {
+      "id": "non_veg",
+      "label": "Non Veg",
+      "order": 2
+    },
+    {
+      "id": "extras",
+      "label": "Breads & Packs",
+      "order": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat_01",
+      "order": 1,
+      "name": "Veg Soup",
+      "short_label": "Soup",
+      "slug": "veg-soup",
+      "diet": "veg",
+      "group": "veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_02",
+      "order": 2,
+      "name": "Veg Starter",
+      "short_label": "Starter",
+      "slug": "veg-starter",
+      "diet": "veg",
+      "group": "veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_03",
+      "order": 3,
+      "name": "Veg Tandoori Starter",
+      "short_label": "Tandoori Starter",
+      "slug": "veg-tandoori-starter",
+      "diet": "veg",
+      "group": "veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_04",
+      "order": 4,
+      "name": "Papad",
+      "short_label": "Papad",
+      "slug": "veg-papad",
+      "diet": "veg",
+      "group": "veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_05",
+      "order": 5,
+      "name": "Veg Main-course",
+      "short_label": "Main-course",
+      "slug": "veg-main-course",
+      "diet": "veg",
+      "group": "veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_06",
+      "order": 6,
+      "name": "Veg Dal & Rice",
+      "short_label": "Dal & Rice",
+      "slug": "veg-dal-rice",
+      "diet": "veg",
+      "group": "veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_07",
+      "order": 7,
+      "name": "Veg Fried Rice",
+      "short_label": "Fried Rice",
+      "slug": "veg-fried-rice",
+      "diet": "veg",
+      "group": "veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_08",
+      "order": 8,
+      "name": "Veg Noodle",
+      "short_label": "Noodle",
+      "slug": "veg-noodle",
+      "diet": "veg",
+      "group": "veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_09",
+      "order": 9,
+      "name": "Veg Biryani",
+      "short_label": "Biryani",
+      "slug": "veg-biryani",
+      "diet": "veg",
+      "group": "veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_10",
+      "order": 10,
+      "name": "Non Veg Soup",
+      "short_label": "Soup",
+      "slug": "non-veg-soup",
+      "diet": "non_veg",
+      "group": "non_veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_11",
+      "order": 11,
+      "name": "Non Veg Starter",
+      "short_label": "Starter",
+      "slug": "non-veg-starter",
+      "diet": "non_veg",
+      "group": "non_veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_12",
+      "order": 12,
+      "name": "Non Veg Tandoori Starter",
+      "short_label": "Tandoori Starter",
+      "slug": "non-veg-tandoori-starter",
+      "diet": "non_veg",
+      "group": "non_veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_13",
+      "order": 13,
+      "name": "Non Veg Main-course",
+      "short_label": "Main-course",
+      "slug": "non-veg-main-course",
+      "diet": "non_veg",
+      "group": "non_veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_14",
+      "order": 14,
+      "name": "Non Veg Dal & Rice",
+      "short_label": "Dal & Rice",
+      "slug": "non-veg-dal-rice",
+      "diet": "non_veg",
+      "group": "non_veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_15",
+      "order": 15,
+      "name": "Non Veg Fried Rice",
+      "short_label": "Fried Rice",
+      "slug": "non-veg-fried-rice",
+      "diet": "non_veg",
+      "group": "non_veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_16",
+      "order": 16,
+      "name": "Non Veg Noodle",
+      "short_label": "Noodle",
+      "slug": "non-veg-noodle",
+      "diet": "non_veg",
+      "group": "non_veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_17",
+      "order": 17,
+      "name": "Non Veg Biryani",
+      "short_label": "Biryani",
+      "slug": "non-veg-biryani",
+      "diet": "non_veg",
+      "group": "non_veg",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_18",
+      "order": 18,
+      "name": "Roti & Bread",
+      "short_label": "Roti & Bread",
+      "slug": "roti-bread",
+      "diet": "both",
+      "group": "extras",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    },
+    {
+      "id": "cat_19",
+      "order": 19,
+      "name": "Family Pack",
+      "short_label": "Family Pack",
+      "slug": "family-pack",
+      "diet": "both",
+      "group": "extras",
+      "description": null,
+      "banner_image": null,
+      "items": []
+    }
+  ]
+}
