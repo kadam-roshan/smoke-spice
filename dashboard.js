@@ -117,7 +117,7 @@
       );
     }).join("") +
       '<a class="result" href="menu.html?q=' + encodeURIComponent(q.trim()) + '">' +
-        '<span></span><span><span class="name">See every match</span><span class="meta">Open the full menu</span></span><span></span>' +
+        '<span></span><span><span class="name">See every match</span><span class="meta">Open the Menu</span></span><span></span>' +
       "</a>";
   }
 
